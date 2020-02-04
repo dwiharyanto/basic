@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<script>
+			function togglePassword () {
+				var pass = document.getElementById("password");
+				if (pass.type === "text"){
+					pass.type = "password";
+				}
+				else {
+					pass.type = "text";
+				}
+			}
+		</script>
+		<link rel="stylesheet" href="../css/style.css">
+	</head>
+	<Body>
+		<h1> Tabel </h1>
+		<div class="table">
+			<table>
+				<thead>
+				</thead>
+				<tbody>
+				<tr>
+					<td>baris 1 kolom 1</td>
+					<td>baris 1 kolom 2</td>
+					<td>baris 1 kolom 3</td>
+					<td>baris 1 kolom 4</td>
+				</tr>
+				<tr>
+					<td>baris 2 kolom 1</td>
+					<td id= "callspan" colspan ="2" rowspan = "2">?</td>
+					<td>baris 2 kolom 4</td>
+				</tr>
+				<tr>
+					<td>baris 3 kolom 1</td>
+					<td>baris 3 kolom 4</td>
+				</tr>
+				<tr>
+					<td>baris 4 kolom 1</td>
+					<td>baris 4 kolom 2</td>
+					<td>baris 4 kolom 3</td>
+					<td>baris 4 kolom 4</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+		
+		<h1> Tabel </h1>
+		<div class="table">
+			<table>
+				<thead>
+				</thead>
+				<tbody>
+				<tr>
+					<td>baris 1 kolom 1</td>
+					<td>baris 1 kolom 2</td>
+					<td>baris 1 kolom 3</td>
+					<td>baris 1 kolom 4</td>
+				</tr>
+				<tr>
+					<td>baris 2 kolom 1</td>
+					<td>baris 2 kolom 2</td>
+					<td>baris 2 kolom 3</td>
+					<td>baris 2 kolom 4</td>
+				</tr>
+				<tr>
+					<td>baris 3 kolom 1</td>
+					<td>baris 3 kolom 2</td>
+					<td>baris 3 kolom 3</td>
+					<td>baris 3 kolom 4</td>
+				</tr>
+				<tr>
+					<td>baris 4 kolom 1</td>
+					<td>baris 4 kolom 2</td>
+					<td>baris 4 kolom 3</td>
+					<td>baris 4 kolom 4</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+		
+		<div id="form">
+			<h1 align = "center">Form</h1>
+			<label for="username">Input: </label>
+			<input type ="text" id="username">
+			<br><br>
+			<label for="password">Input: </label>
+			<input type ="password" id="password">
+			<input type= "checkbox" onclick="togglePassword()" id="showPass">
+			<label for "showPass">Show Password</label>
+			<br><br>
+			<input type="radio" id="man" name="gender">
+					<label for="man"> Man </label>
+			<input type="radio" id="woman" name="gender">
+					<label for="woman"> woman </label>
+			<br><br>
+			<input type="checkbox" id="run">
+					<label for="run"> running </label>
+			<input type="checkbox" id="walking">
+					<label for="walking"> walking </label>
+			<input type="checkbox" id="swimming">
+					<label for="swimming"> swimming </label>
+			<br><br>
+			<textarea></textarea>
+			<br><br>
+			<select>
+				<option></option>
+				<option>option 1</option>
+				<option>option 2</option>
+				<option>option 3</option>
+			</select>
+			<br><br>
+			<button type="submit">Kirim</button>
+		</div>
+	</body>
+</html>
