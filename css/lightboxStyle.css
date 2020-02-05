@@ -1,0 +1,127 @@
+/*Font Face*/
+@font-face {
+	font-family:'KaushanScript-Regular';
+	src:url(../font/KaushanScript-Regular.otf) format('opentype');
+}
+
+
+/*Main Style*/
+body {
+	font: 18px/36px 'KaushanScript-Regular', 'Arial Narrow', arial, sans-serif;
+}
+
+h1 {
+	font-size: 80px;
+	margin: 50px 0;
+	text-align: center;
+	text-shadow: 1px 1px 2px lightblue;
+}
+
+.container {
+	width: 1000px;
+	background-color: green;
+	margin: auto;
+	padding: 20px;
+	box-shadow:0 0 3px rgba (0,0,0, 0.5);
+}
+
+/*galerry*/
+/*CSS untuk menampilkan gallery berupa thumbnail berbentuk lingkaran*/
+.gallery li {
+	width: 400px;
+	height: 400px;
+	border-radius: 50%;
+	overflow: hidden;
+	border: 5px solid black;
+	float: left;
+	margin-left: 50px;
+	margin-right: 10px;
+	position: relative;
+}
+
+.gallery li a img {
+	border-radius: 50%;
+	margin-left:  -100px;
+}
+
+.gallery li span {
+	display: block;
+	width: 400px;
+	height: 400px;
+	background-color: rgba(255, 99, 71, 0.5);
+	border-radius: 50%;
+	position: absolute;
+	top:0;
+	text-align: center;
+	line-height: 400px;
+	font-size: 80px;
+	color: green;
+	opacity: 0;
+	transition: .3s;
+	transform: scale(0) rotate(0);
+}
+
+.gallery li a:hover span {
+	opacity: 1;
+	transform: scale(1) rotate(360deg);
+}
+
+
+/*Overlay*/
+/*overlay merupakan teknik untuk menampilkan gambar secara penuh dari sebuah gambar thumbnail*/
+.overlay {
+	position: fixed;
+	background-color: rgba(0,0,0,0);
+	z-index: 9999;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+}
+
+.overlay:target	{
+	background-color: rgba(0,0,0,0.7);
+	transition: .3s;
+	right: 0;
+	bottom: 0;
+	width: auto;
+	height: auto;
+	text-align: center;
+	padding: 120px 0;
+
+}
+
+.overlay:target .showIMG {
+	width: 1000px;
+	margin:auto;
+}
+
+.overlay:target .close {
+	color: red;
+	font-size: 40px;
+}
+
+.overlay:target .prev {
+	display: inline-block;
+	color: red;
+	font-size: 40px;
+	margin-right: 100px;
+}
+
+.overlay:target img {
+	display: inline-block;
+	color: red;
+	font-size: 40px;
+}
+
+.overlay:target .next {
+	display: inline;
+	color: red;
+	font-size: 40px;
+	margin-left: 100px;
+
+}
+.overlay:target .next #first, .overlay:target .next #first {
+	opacity: 0;
+}
